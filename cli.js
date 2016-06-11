@@ -51,6 +51,7 @@ ubnt.events.on('new', function(device){
 		}
 		clear();
 		console.log(table.toString());
+		console.log('Waiting for more... (Ctrl+C to exit)')
 	} else {
 		console.log(device)
 	}
