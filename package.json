@@ -1,6 +1,6 @@
 {
   "name": "ubnt-discover",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Discover ubiquiti/ubnt devices on the network",
   "main": "cli.js",
   "bin": {
