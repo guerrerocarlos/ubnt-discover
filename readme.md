@@ -23,10 +23,10 @@ Discover ubiquiti devices on the network
 	 $ ubnt-discover
  Options
 	 -v1, Search for V1 devices
-	 -v2, --unifi Search for V2 (UniFi) devices
+	 -v2, Search for V2 devices
 	 --notable Don't show as a table
  Examples
-	 $ ubnt-discover -v1
+	 $ ubnt-discover -v2
 ```
 
 ```
@@ -66,4 +66,4 @@ ubnt.events.on('new', function(device){
 
 ## License
 
-MIT © [Sindre Sorhus](https://sindresorhus.com)
+MIT © [Carlos Guerrero](https://carlosguerrero.com)
