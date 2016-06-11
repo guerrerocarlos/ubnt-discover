@@ -7,7 +7,7 @@
     "ubnt-discover": "cli.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "author": "Carlos Guerrero <guerrerocarlos@gmail.com>",
   "license": "ISC",
