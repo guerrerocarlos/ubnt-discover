@@ -249,13 +249,21 @@ const query = version => {
   });
 
   if(version.indexOf('2') > -1){
-    socket.bind(MCAST_PORT);
+    try{
+      socket.bind(MCAST_PORT);
+    }catch(e){
+      // EADDRINUSE
+    }
   } else {
     socket.bind(0);
   }
 
 }
 
+process.on('uncaughtException', function(){
+  console.log("ERROR:")
+  console.log("Couldn't open UDP ports properly, please make sure that the Ubiquity Discovery Tool (Chrome extension) is properly closed.") 
+})
 
 
 module.exports['1'] = () => query('1')
