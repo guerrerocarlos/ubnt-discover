@@ -1,4 +1,4 @@
-# public-ip [![Build Status](https://travis-ci.org/guerrerocarlos/ubnt-discover.svg?branch=master)](https://travis-ci.org/guerrerocarlos/ubnt-discover)
+# ubnt-discover [![Build Status](https://travis-ci.org/guerrerocarlos/ubnt-discover.svg?branch=master)](https://travis-ci.org/guerrerocarlos/ubnt-discover)
 
 > List ubiquiti/ubnt devices in your network right from the cli
 
@@ -9,7 +9,6 @@ Unofficial fork of the mechanism used by the [official chrome extension](https:/
 ```
 $ npm install --global ubnt-discover
 ```
-
 
 ## Usage
 
