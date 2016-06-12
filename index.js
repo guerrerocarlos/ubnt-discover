@@ -262,7 +262,7 @@ const query = version => {
 
 process.on('uncaughtException', function(){
   console.log("ERROR:")
-  console.log("Couldn't open UDP ports properly, please make sure that the Ubiquity Discovery Tool (Chrome extension) is properly closed.") 
+  console.log("Couldn't open UDP ports properly, please make sure that the Ubiquity Discovery Tool (Chrome extension) is closed.") 
 })
 
 
