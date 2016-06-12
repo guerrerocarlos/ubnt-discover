@@ -95,7 +95,7 @@ function parseV1Packet (packet) {
             case PKT_V1_WEBUI:
 
                 if (piece.length === 4) {
-                    piece = getIntValue(piece);
+                    // piece = getIntValue(piece);
                     msg.webPort = piece & 0xFFFF;
                     msg.webProtocol = ((piece >> 16) & 0xFFFF) > 0 ? 'https' : 'http';
                 }
