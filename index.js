@@ -236,7 +236,10 @@ const query = version => {
 
         var block = new Netmask(intf.address, intf.netmask);
 
+        socket.send(message, MCAST_PORT, MCAST_ADDR)
+
         block.forEach(function(ip, long, index) {
+          // console.log(ip)
           if (ip != undefined) {
             socket.send(message, MCAST_PORT, ip)
           }
@@ -260,10 +263,10 @@ const query = version => {
 
 }
 
-process.on('uncaughtException', function(){
-  console.log("ERROR:")
-  console.log("Couldn't open UDP ports properly, please make sure that the Ubiquity Discovery Tool (Chrome extension) is closed.")
-})
+// process.on('uncaughtException', function(){
+//   console.log("ERROR:")
+//   console.log("Couldn't open UDP ports properly, please make sure that the Ubiquity Discovery Tool (Chrome extension) is closed.")
+// })
 
 
 module.exports['1'] = () => query('1')

@@ -11,7 +11,7 @@ const cli = meow(`
 	  $ ubnt-discover
 	Options
 	  -v1, Search for V1 devices
-		-v2, Search for V2 (UniFi) devices
+		-v2, Search for V2 devices
 	  --more Show more information (not presented as table)
 	Examples
 	  $ ubnt-discover -v1
@@ -31,16 +31,16 @@ var table = new Table({
 
 if(cli.flags['v'] === true || cli.flags['v'] === 2){
 	cli.flags['v'] = 2
-	table.push(['Device Type', 'Host', 'IP', 'Mac', 'Firmware', 'Model'])
+	table.push(['Type', 'Host', 'IP', 'Mac', 'Firmware', 'Model'])
 } else {
 	cli.flags['v'] = 1
-	table.push(['Device Type', 'Name', 'IP', 'Mac', 'Firmware'])
+	table.push(['Device Type', 'Name --------- ', 'IP', 'Mac', 'Firmware'])
 }
 
 ubnt[cli.flags['v']]()
 
 ubnt.events.on('new', function(device){
-	if(!cli.flags.notable){
+	if(!cli.flags.more){
 		if(cli.flags['v'] === 1){
 			table.push([device.display, device.hostname, device.ip, device.mac, device.firmware])
 		} else {
