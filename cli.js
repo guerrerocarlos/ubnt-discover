@@ -34,7 +34,7 @@ if(cli.flags['v'] === true || cli.flags['v'] === 2){
 	table.push(['Type', 'Host', 'IP', 'Mac', 'Firmware', 'Model'])
 } else {
 	cli.flags['v'] = 1
-	table.push(['Device Type', 'Name --------- ', 'IP', 'Mac', 'Firmware'])
+	table.push(['Device Type', 'Name ----------------------- ', 'IP', 'Mac', 'Firmware'])
 }
 
 ubnt[cli.flags['v']]()
